@@ -20,15 +20,15 @@ describe("Handle adactin ", () => {
     cy.get("#room_nos").select("1 - One");
 
     cy.get("#datepick_in")
-      .type("30/04/2024")
+      .type("01/05/2024")
       .invoke("val")
       .then((text) => {
-        expect("30/04/2024").to.equal(text);
+        expect("01/05/2024").to.equal(text);
       });
     cy.wait(3000);
     cy.get("#datepick_out")
-      .type("01/05/2024")
-      .should("have.value", "01/05/2024");
+      .type("02/05/2024")
+      .should("have.value", "02/05/2024");
     cy.get("#adult_room").select("2 - Two");
     cy.get("#child_room").select("1 - One");
     cy.wait(3000);
