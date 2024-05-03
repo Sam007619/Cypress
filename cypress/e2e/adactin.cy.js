@@ -19,16 +19,9 @@ describe("Handle adactin ", () => {
     cy.get("#room_type").select("Deluxe").should("have.value", "Deluxe");
     cy.get("#room_nos").select("1 - One");
 
-    cy.get("#datepick_in")
-      .type("01/05/2024")
-      .invoke("val")
-      .then((text) => {
-        expect("01/05/2024").to.equal(text);
-      });
-    cy.wait(3000);
-    cy.get("#datepick_out")
-      .type("02/05/2024")
-      .should("have.value", "02/05/2024");
+    cy.get("#datepick_in").clear().type("08/05/2024").should('have.value','08/05/2024')
+    cy.wait(5000);
+    cy.get("#datepick_out").clear().type("12/05/2024").should('have.value','12/05/2024')
     cy.get("#adult_room").select("2 - Two");
     cy.get("#child_room").select("1 - One");
     cy.wait(3000);
