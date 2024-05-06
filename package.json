@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": " npx cypress run",
-    "runtests":"npm run test --"
+    "runtests": "npm run test --"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +15,4 @@
   "devDependencies": {
     "cypress-mochawesome-reporter": "^3.8.2"
   }
-  
-  }
+}
